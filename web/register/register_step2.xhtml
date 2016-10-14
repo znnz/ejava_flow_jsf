@@ -13,17 +13,18 @@
                 <h1>Step 2</h1>
         
                 <h:form>
-                    <h:selectOneMenu value="#{registerFlow.country}">
+                    <h:selectOneMenu value="#{registerFlow.country}" class="form-control">
+                        <f:selectItem itemLabel="Select Country" itemDisabled="true"/>
                         <f:selectItems value="#{registerFlow.countries}"/>
                         <f:ajax event="change" execute="@this" render="citiesSelect"/>
                     </h:selectOneMenu>
                     
-                    <h:selectOneMenu value="#{registerFlow.city}" id="citiesSelect">
+                    <h:selectOneMenu value="#{registerFlow.city}" id="citiesSelect" class="form-control">
                         <f:selectItems value="#{registerFlow.cities}"/>
                     </h:selectOneMenu>
                     
-                    <h:commandButton value="Step 1" action="register"/>
-                    <h:commandButton value="Confirm" action="register_summary" />
+                    <h:commandButton value="Step 1" action="register" class="btn btn-success"/>
+                    <h:commandButton value="Confirm" action="register_summary" class="btn btn-success"/>
                 </h:form>
             </h:panelGroup>
         </h:panelGroup>

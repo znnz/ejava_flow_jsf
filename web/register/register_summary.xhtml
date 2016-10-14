@@ -4,26 +4,34 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         <title>Facelet Title</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
     </h:head>
     <h:body>
-        <h:outputLabel>Name:</h:outputLabel>
-        <h:outputLabel value="#{registerFlow.name}" />
-        
-        <h:outputLabel>Email :</h:outputLabel>
-        <h:outputLabel value="#{registerFlow.email}" />
-        
-        <h:outputLabel>Age :</h:outputLabel>
-        <h:outputLabel value="#{registerFlow.age}" />
-        
-        <h:outputLabel>Country :</h:outputLabel>
-        <h:outputLabel value="#{registerFlow.country}" />
-        
-        <h:outputLabel>Cities :</h:outputLabel>
-        <h:outputLabel value="#{registerFlow.city}" />
-        
-        <h:form>
-            <h:commandButton value="End" action="#{registerFlow.processFlow()}" />
-        </h:form>
+           <h:panelGroup layout="block" class="container">
+                <h:panelGroup layout="block" class="row">
+                    <h1>Summary</h1>
+                    <h:panelGrid columns="2" class="table">
+                        <h:outputLabel>Name:</h:outputLabel>
+                        <h:outputLabel value="#{registerFlow.name}" />
+
+                        <h:outputLabel>Email :</h:outputLabel>
+                        <h:outputLabel value="#{registerFlow.email}" />
+
+                        <h:outputLabel>Age :</h:outputLabel>
+                        <h:outputLabel value="#{registerFlow.age}" />
+
+                        <h:outputLabel>Country :</h:outputLabel>
+                        <h:outputLabel value="#{registerFlow.country}" />
+
+                        <h:outputLabel>Cities :</h:outputLabel>
+                        <h:outputLabel value="#{registerFlow.city}" />
+                    </h:panelGrid>
+                    <h:form>
+                        <h:commandButton value="End" action="#{registerFlow.processFlow()}" class="btn btn-success"/>
+                    </h:form>
+               </h:panelGroup>
+           </h:panelGroup>
+     
     </h:body>
 </html>
 
